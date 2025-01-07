@@ -5,15 +5,18 @@
 Create a new Angular project:
 
 Bash
-
+```
 ng new my-auth-app
 cd my-auth-app
+```
 Install necessary packages:
 
 Bash
 
+```
 npm install @angular/material @angular/cdk @angular/flex-layout
 npm install rxjs-compat
+```
 
 # 2. Create Authentication Service
 
@@ -21,11 +24,14 @@ Create a service:
 
 Bash
 
+```
 ng generate service services/auth
+```
 Implement the service (auth.service.ts):
 
 TypeScript
 
+```typescript
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -50,6 +56,7 @@ export class AuthService {
   }
 }
 
+```
 
 # 3. Create Authorization Guard
 
@@ -57,11 +64,15 @@ Create a guard:
 
 Bash
 
+```
 ng generate guard guards/auth
+```
+
 Implement the guard (auth.guard.ts):
 
 TypeScript
 
+```typescript
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -87,18 +98,22 @@ export class AuthGuard implements CanActivate {
     );
   }
 }
-
+```
 # 4. Create Login Component
 
 Generate a component:
 
 Bash
 
+```
 ng generate component components/login
+
+```
 Implement the component (login.component.ts):
 
 TypeScript
 
+```typescript
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
@@ -118,6 +133,7 @@ export class LoginComponent {
   }
 }
 
+```
 
 # 5. Create Protected Component
 
@@ -125,11 +141,15 @@ Generate a component:
 
 Bash
 
+```
 ng generate component components/protected
+
+```
 Implement the component (protected.component.ts):
 
 TypeScript
 
+```typescript
 import { Component } from '@angular/core';
 
 @Component({
@@ -140,12 +160,15 @@ import { Component } from '@angular/core';
 export class ProtectedComponent {
 
 }
-6. Configure Routing
+```
+# 6. Configure Routing
+
 
 Update app-routing.module.ts:
 
 TypeScript
 
+```typescript
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
@@ -163,13 +186,17 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-7. Run the Application
+
+```
+# 7. Run the Application
 
 Start the development server:
 Bash
 
+```
 ng serve
 
+```
 # Explanation:
 
 Authentication: The AuthService handles user login and logout. It uses a BehaviorSubject to manage the logged-in state.
