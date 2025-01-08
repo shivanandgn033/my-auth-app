@@ -55,7 +55,6 @@ export class AuthService {
     return this.isLoggedIn$.asObservable(); 
   }
 }
-
 ```
 
 # 3. Create Authorization Guard
@@ -132,7 +131,6 @@ export class LoginComponent {
     this.router.navigate(['/']); 
   }
 }
-
 ```
 
 # 5. Create Protected Component
@@ -143,7 +141,6 @@ Bash
 
 ```
 ng generate component components/protected
-
 ```
 Implement the component (protected.component.ts):
 
@@ -186,7 +183,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 # 7. Run the Application
 
