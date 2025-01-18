@@ -1,6 +1,6 @@
 
 
-### 1. Project Setup
+### 1. Project Setup.
 
 Create a new Angular project:
 
@@ -18,7 +18,7 @@ npm install @angular/material @angular/cdk @angular/flex-layout
 npm install rxjs-compat
 ```
 
-### 2. Create Authentication Service
+### 2. Create Authentication Service.
 
 Create a service:
 
@@ -57,7 +57,7 @@ export class AuthService {
 }
 ```
 
-### 3. Create Authorization Guard
+### 3. Create Authorization Guard.
 
 Create a guard:
 
@@ -98,7 +98,7 @@ export class AuthGuard implements CanActivate {
   }
 }
 ```
-### 4. Create Login Component
+### 4. Create Login Component.
 
 Generate a component:
 
@@ -133,7 +133,7 @@ export class LoginComponent {
 }
 ```
 
-### 5. Create Protected Component
+### 5. Create Protected Component.
 
 Generate a component:
 
@@ -158,7 +158,7 @@ export class ProtectedComponent {
 
 }
 ```
-### 6. Configure Routing
+### 6. Configure Routing.
 
 
 Update app-routing.module.ts:
@@ -184,7 +184,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 ```
-### 7. Run the Application
+### 7. Run the Application.
 
 Start the development server:
 Bash
